@@ -184,7 +184,7 @@ void imp(int * a , int b){
       if(i == b-1){
 			cout  << "\n";
 		}else{
-			if(a[i] != 0)
+			if(a[i] != 0 && a[i+1] != 0)
 			  cout << ",";
 		 }
 	} 
