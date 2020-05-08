@@ -99,7 +99,7 @@ void E3(){
 	int tamano = 0 , po,J1 = 0 ,  J2 = 0 , ron = 1;
 	cout << "**Bienvenido**\n";
 	do{
-		cout << "->Ingrese un numero par";
+		cout << "->Ingrese un numero par: ";
 		cin >> tamano;
 		
 	}while (tamano %2 != 0);
@@ -115,7 +115,7 @@ void E3(){
 	for(int i = 0 ; i < tamano ; ++i){
 	    if(i%2 == 0){
 	       do{
-	       	    cout << "J1 escoge:";
+	       	    cout << "J1 escoge: ";
 	    		cin >> po;
 	    		
 		   }while(esta(arreglo2,po, tamano) == true);
@@ -124,7 +124,7 @@ void E3(){
 	    	arreglo2[po] = po;
 		}else{
 		    do{
-	       	    cout << "J2 escoge:";
+	       	    cout << "J2 escoge: ";
 	    		cin >> po;
 	    		
 		   }while(esta(arreglo2,po, tamano) == true);
@@ -132,7 +132,7 @@ void E3(){
 		   J2+=arreglo[po];
 		   arreglo2[po] = po;
 		   if(tamano/2 == ron){
-		      cout << "FINAL"<<" - [PTS J1: "<< J1 << "<-> PTS J2:"<< J2 <<"\n\n";
+		      cout << "FINAL"<<" - [PTS J1: "<< J1 << " <-> PTS J2:"<< J2 <<"\n\n";
 			  if(J1 > J2 ){
 			  	 cout << "GANA J1\n\n";
 			  }else{
@@ -143,13 +143,13 @@ void E3(){
 				}
 			  }     
 		   }else{
-				cout << "Ronda"<<ron<<" - [PTS J1: "<< J1 << "<-> PTS J2:"<< J2 <<"\n\n";	   
+				cout << "Ronda"<<ron<<" - [PTS J1: "<< J1 << " <-> PTS J2:"<< J2 <<"\n\n";	   
 		   }
 		   ron++;
 		   
 		}
 	}
-	cout << "Arreglo usado:[";
+	cout << "Arreglo usado: [";
     for(size_t i =0 ; i< tamano ; ++i)
 	{
 		if(i == tamano-1){
