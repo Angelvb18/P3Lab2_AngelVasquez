@@ -4,6 +4,7 @@
 using std::cout ;
 using std::endl;
 using std::cin;
+int mcd(int , int );
 void imp (int * , int);
 void denuevo(int * , int *& , int );
 bool esta(int *, int , int );
@@ -46,7 +47,20 @@ void menu(){
 }
 
 void E1(){
-	
+	int n ,  cont = 0;
+	do{
+		cout << "Ingrese n :";
+		cin >> n;
+	}while(n <= 0);
+	for(int i = 1 ; i < n ; ++i){
+		 
+	   if(mcd(n,i) == 1 ){
+	      cont++;
+	      
+	   }
+	}
+	//cout << "??(??) ="
+	 cout <<"indicatriz de Euler = " << cont << endl;
 }
 void E2(){
 	int n = 0;
@@ -180,7 +194,17 @@ void denuevo(int * a1, int *& a2  , int t){
 	    a2[i] = a1[i];
 	}
 }
-
+int mcd(int a , int b){
+        
+        if(b == 0){
+            
+           return a;
+        }
+        else{
+             
+            return mcd(b, a%b);
+        }
+}
 
 
 
